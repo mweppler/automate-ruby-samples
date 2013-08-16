@@ -19,6 +19,7 @@ class SampleTest < Test::Unit::TestCase
     element = @driver.find_element(:name, 'q')
     element.send_keys "BrowserStack"
     element.submit
+    sleep 0.1
     assert_equal(@driver.title, "BrowserStack - Google Search")
   end
  
